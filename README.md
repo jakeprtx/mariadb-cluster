@@ -1,8 +1,7 @@
 # mariadb-cluster with Portworx
 ## Preparations
 
-Unless your Kubernetes setup has volume provisioning for StatefulSet (GKE has) you need to make sure the Persistent Volumes exist first.
-
+We are using a storageclass ``porx-mysql-sc.yml`` of a replication of 2 to create the volumes
 ````
 kubectl create -f porx-mariadb-mysql-service.yml
 kubectl create -f porx-mariadb-mariadb-service.yml
