@@ -13,7 +13,7 @@ kubectl create -f porx-mariadb-statefulset.yml
 
 ## Initialize volumes and cluster
 
-First get a single instance with --wsrep-new-cluster up and running:
+First get a single instance with ``--wsrep-new-cluster`` up and running:
 
 ````
 kubectl logs mariadb-0 
@@ -35,7 +35,7 @@ We need to join the other nodes so keep this pod running and run
 sh porx-unbootstrap.sh
 ````
 
-This scales to three nodes. You can kubectl logs -f mariadb-1 to see something like:
+This scales to three nodes. You can ``kubectl logs -f mariadb-1`` to see something like:
 
 ````
 [Note] WSREP: Quorum results:
